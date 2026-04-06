@@ -51,6 +51,13 @@ def viewMyEvents():
     pass
 
 # helper methods
+def create_events_dict(event_name, max_size, list_of_names):
+    events = { event_name : {
+        'max_attendees' : max_size,
+        'attendee_names' : [list_of_names] * max_size
+        }
+        }
+    return events
 
 if '__name__' == '__main__':
     test_events = {
